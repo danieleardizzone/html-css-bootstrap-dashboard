@@ -9,9 +9,11 @@ img{
 
 /* LAYOUT */
 .webapp{
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -65,13 +67,53 @@ img{
     color: white;
 }
 
-.side-bar__nav-items{
+.side-bar__nav-items > a{
     display: flex;
     align-items: baseline;
-    gap: 17px;
+    gap: 15px;
 }
 
 
+
+
+
+.app__main-content{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.app__main-content__top{
+    background-color: #1B72E8;
+    color: white;
+}
+
+.app__main-content__top .row > *{
+    display: flex;
+}
+
+.app__main-content__top .row :nth-child(2),
+.app__main-content__top .row :nth-child(3){
+    flex-direction: column;
+}
+
+.add_student a{
+    display: flex;
+    gap: 18px;
+}
+
+.app__main-content__top .badge{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.boolean .title,
+.online_now{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.add_student i{
+    font-size: 40px;
+}
 
 /* MEDIA QUERY */
 

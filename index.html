@@ -11,7 +11,7 @@
 <body class="webapp debu">
         <header class="app__header py-2">
             <div class="container-fluid">
-                <div class="row d-flex align-items-center">
+                <div class="row d-flex align-items-center flex-nowrap">
                     <div class="col-auto">
                         <figure class="d-inline d-lg-none">
                             <img src="./img/mobile-logo.png" id="logo-small">
@@ -52,37 +52,93 @@
         </header>
         <main class="app__main flex-grow-1">
             <div class="container-fluid">
-                <div class="row d-flex">
+                <div class="row d-flex flex-nowrap">
                     <div class="col-auto app__side-bar">
                         <div class="container-fluid">
                             <div class="row py-3">
                                 <div class="col">
                                     <ul class="side-bar__nav list-unstyled">
                                         <li class="side-bar__nav-items py-1">
-                                            <i class="fa-solid fa-house"></i>
-                                            <a href="#">Home</a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-house"></i>
+                                                <span class="d-none d-lg-inline">Home</span>
+                                            </a>
                                         </li>
                                         <li class="side-bar__nav-items py-1">
-                                            <i class="fa-solid fa-chart-simple"></i>
-                                            <a href="#">Stats</a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-chart-simple"></i>
+                                                <span class="d-none d-lg-inline">Stats</span>
+                                            </a>
                                         </li>
                                         <li class="side-bar__nav-items py-1">
-                                            <i class="fa-solid fa-signal"></i>
-                                            <a href="#">Signals</a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-signal"></i>
+                                                <span class="d-none d-lg-inline">Signals</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col align-self-end">
                                     <div class="side-bar__nav-items">
-                                        <i class="fa-solid fa-gear"></i>
-                                        <a href="#">Admin</a>
+                                        <a href="#">
+                                            <i class="fa-solid fa-gear"></i>
+                                            <span class="d-none d-lg-inline">Admin</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-auto app__main-content flex-grow-1">
-                        ciao
+                        <div class="app__main-content__top sticky-top">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="add_student col-12 col-md-4 py-2 py-md-4 d-md-none">
+                                        <a href="#">
+                                            <span>Nuovo Studente</span>
+                                            <i class="fa-regular fa-square-plus"></i>
+                                        </a>
+                                    </div>
+                                    <div class="boolean col-12 col-md-4 col-lg-5 py-2 py-md-4">
+                                        <div>
+                                            <span class="title">Boolean</span>
+                                            <span class="badge rounded-pill">Piano blaze</span>
+                                        </div>
+                                        <div>
+                                            <span class="badge rounded-pill">
+                                                3 app
+                                            </span>
+                                            <span>
+                                                &NestedGreaterGreater;
+                                            </span>
+                                            <span class="badge rounded-pill d-lg-none">
+                                                &plus;
+                                            </span>
+                                            <span class="badge rounded-pill d-none d-lg-inline-block">
+                                                Boolean mobile app
+                                            </span>
+                                            <span class="badge rounded-pill d-none d-lg-inline-block">
+                                                Boolean web app
+                                            </span>
+                                            <span class="badge rounded-pill d-none d-lg-inline-block">
+                                                Boolean blog app
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="online_student col-12 col-md-4 col-lg-4 py-2 py-md-4">
+                                        <div>Studenti online negli ultimi 30 minuti</div>
+                                        <div class="online_now">125</div>
+                                    </div>
+                                    <div class="add_student col-12 col-md-4 col-lg-3 py-2 py-md-4 d-none d-md-flex">
+                                        <a href="#">
+                                            <span>Nuovo Studente</span>
+                                            <i class="fa-regular fa-square-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
