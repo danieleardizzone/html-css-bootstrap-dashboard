@@ -1,0 +1,109 @@
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* LAYOUT */
+.webapp{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* MY STYLE */
+
+.app__header{
+    max-height: 70px;
+    min-height: 70px;
+}
+
+#logo-small{
+    width: 50px;
+    aspect-ratio: 1;
+}
+
+.search__bar{
+    position: relative;
+}
+
+.search__bar .search__bar__icon{
+    position: absolute;
+    top: 5px;
+    left: 18px;
+}
+
+.real__search__bar{
+    background-color: #e5e5e5;
+}
+
+.header__nav{
+    gap: 20px;
+    color: #5B5858;
+}
+
+#notifications{
+    color: #FF8F00;
+}
+
+
+
+.app__main .container-fluid,
+.app__main .row{
+    height: 100%;
+}
+
+.app__side-bar{
+    width: 68px;
+    background-color: #051E34;
+    background-image: url(../img/sidebar-bg.png);
+    background-size: cover;
+    color: white;
+}
+
+.side-bar__nav-items{
+    display: flex;
+    align-items: baseline;
+    gap: 17px;
+}
+
+
+
+/* MEDIA QUERY */
+
+
+/* TABLET */
+@media (min-width: 768px) {
+
+}
+
+/* DESKTOP*/
+@media (min-width: 992px) {
+    .app__side-bar{
+        width: 150px;
+    }
+}
+
+/* LARGE DESKTOP*/
+@media (min-width: 1200px) {
+
+}
+
+
+@media (min-width: 1400px) {
+
+}
+
+/* DEBUG */
+
+.debug [class^="col"]{
+    border: 2px solid greenyellow;
+}
+
+.debug .app__main{
+    background-color: aquamarine;
+}

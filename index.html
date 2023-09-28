@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/382dfa8eb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bootstrap Dashboard</title>
+</head>
+<body class="webapp debu">
+        <header class="app__header py-2">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-auto">
+                        <figure class="d-inline d-lg-none">
+                            <img src="./img/mobile-logo.png" id="logo-small">
+                        </figure>
+                        <figure class="d-none d-lg-block ">
+                            <img src="./img/logo.svg" alt="logo">
+                        </figure>
+                    </div>
+                    <div class="col-auto search__bar flex-grow-1">
+                        <span class="search__bar__icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input class="real__search__bar w-100 px-4 py-1 border-0 rounded" type="text" placeholder="Prova a cercare: Lezioni di Laravel">
+                    </div>
+                    <div class="col-auto">
+                        <ul class="header__nav list-unstyled d-flex">
+                            <li class="header__nav-items d-none d-lg-inline">
+                                <i class="fa-solid fa-list-ul"></i>
+                            </li>
+                            <li class="header__nav-items d-none d-lg-inline">
+                                <i class="fa-solid fa-circle-question"></i>
+                            </li>
+                            <li class="header__nav-items d-none d-lg-inline">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </li>
+                            <li class="header__nav-items" id="notifications">
+                                <i class="fa-solid fa-bell"></i>
+                            </li>
+                        </ul>
+
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="app__main flex-grow-1">
+            <div class="container-fluid">
+                <div class="row d-flex">
+                    <div class="col-auto app__side-bar">
+                        <div class="container-fluid">
+                            <div class="row py-3">
+                                <div class="col">
+                                    <ul class="side-bar__nav list-unstyled">
+                                        <li class="side-bar__nav-items py-1">
+                                            <i class="fa-solid fa-house"></i>
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li class="side-bar__nav-items py-1">
+                                            <i class="fa-solid fa-chart-simple"></i>
+                                            <a href="#">Stats</a>
+                                        </li>
+                                        <li class="side-bar__nav-items py-1">
+                                            <i class="fa-solid fa-signal"></i>
+                                            <a href="#">Signals</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col align-self-end">
+                                    <div class="side-bar__nav-items">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <a href="#">Admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto app__main-content flex-grow-1">
+                        ciao
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
