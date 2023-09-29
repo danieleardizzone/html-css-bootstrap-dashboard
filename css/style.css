@@ -7,21 +7,38 @@ img{
     max-width: 100%;
 }
 
+th, .badge{
+    font-weight: 400;
+}
+
 /* LAYOUT */
 .webapp{
-    width: 100vw;
+    
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
 }
+
+.app__main-content{
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+}
+
+.app__header,
+.app__side-bar{
+    overflow:visible;
+}
+
+
+
+
 
 
 /* MY STYLE */
 
 .app__header{
-    max-height: 70px;
-    min-height: 70px;
+    padding: 14px 0;
 }
 
 #logo-small{
@@ -37,6 +54,7 @@ img{
     position: absolute;
     top: 5px;
     left: 18px;
+    pointer-events: none;
 }
 
 .real__search__bar{
@@ -79,7 +97,7 @@ img{
 
 .app__main-content{
     padding-left: 0;
-    padding-right: 0;
+    
 }
 
 .app__main-content__top{
@@ -115,6 +133,70 @@ img{
     font-size: 40px;
 }
 
+th, 
+td{
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.code_icon{
+    color: white;
+    background-color: #F26551;
+    font-size: 20px;
+    padding: 2px 4px;
+}
+
+.row__title{
+    display: flex;
+    gap: 10px;
+}
+
+.table__actions{
+    display: flex;
+    gap: 8px;
+    color: #6C757D;
+}
+
+.table__actions > *{
+    width: 30px;
+    aspect-ratio: 1;
+    border: 1px solid #6C757D;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.accordion__questions,
+.accordion__answers,
+.form-check__text{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.app__main-content__cards .card{
+    max-width: 98%;
+}
+
+
+
+/* HOVER */
+
+.side-bar__nav-items:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
 /* MEDIA QUERY */
 
 
@@ -127,6 +209,9 @@ img{
 @media (min-width: 992px) {
     .app__side-bar{
         width: 150px;
+    }
+    .app__main-content__cards .row{
+        margin-right: 110px;
     }
 }
 

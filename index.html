@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Bootstrap Dashboard</title>
 </head>
-<body class="webapp debu">
-        <header class="app__header py-2">
+<body class="webapp debu"> <!-- --> 
+        <header class="app__header sticky-top">
             <div class="container-fluid">
                 <div class="row d-flex align-items-center flex-nowrap">
                     <div class="col-auto">
@@ -20,7 +20,7 @@
                             <img src="./img/logo.svg" alt="logo">
                         </figure>
                     </div>
-                    <div class="col-auto search__bar flex-grow-1">
+                    <div class="col search__bar flex-grow-1">
                         <span class="search__bar__icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
@@ -29,16 +29,32 @@
                     <div class="col-auto">
                         <ul class="header__nav list-unstyled d-flex">
                             <li class="header__nav-items d-none d-lg-inline">
-                                <i class="fa-solid fa-list-ul"></i>
+                                <a href="#">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </a>
                             </li>
                             <li class="header__nav-items d-none d-lg-inline">
-                                <i class="fa-solid fa-circle-question"></i>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </a>
                             </li>
                             <li class="header__nav-items d-none d-lg-inline">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <a href="#">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
                             </li>
                             <li class="header__nav-items" id="notifications">
-                                <i class="fa-solid fa-bell"></i>
+                                <div class="dropdown">
+                                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </a>
+                                  
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                      <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    </ul>
+                                  </div>
                             </li>
                         </ul>
 
@@ -90,7 +106,7 @@
                         </div>
                     </div>
                     <div class="col-auto app__main-content flex-grow-1">
-                        <div class="app__main-content__top sticky-top">
+                        <div class="app__main-content__top mb-3">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="add_student col-12 col-md-4 py-2 py-md-4 d-md-none">
@@ -131,13 +147,416 @@
                                         <div class="online_now">125</div>
                                     </div>
                                     <div class="add_student col-12 col-md-4 col-lg-3 py-2 py-md-4 d-none d-md-flex">
-                                        <a href="#">
+                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                                             <span>Nuovo Studente</span>
                                             <i class="fa-regular fa-square-plus"></i>
                                         </a>
+                                        
+                                        <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                            <div class="offcanvas-header">
+                                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body">
+                                                <form action="">
+                                                    <div class="d-flex">
+                                                        <div class="m-1">
+                                                            <label for="name" class="form-label">Nome</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+    
+                                                        <div class="m-1">
+                                                            <label for="surname" class="form-label">Cognome</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="m-1">
+                                                            <label for="email" class="form-label">Email</label>
+                                                            <input type="email" class="form-control">
+                                                        </div>
+                                                        <div class="m-1">
+                                                            <label for="password" class="form-label">Password</label>
+                                                            <input type="password" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-1">
+                                                        <label for="address" class="form-label">Indirizzo</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="m-1">
+                                                            
+                                                        </div>
+                                                        <div class="m-1">
+                                                            
+                                                        </div>
+                                                        <div class="m-1">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="app__main-content__cards debu">
+                            
+                                <div class="row">
+                                    <div class="col-12 col-lg-8">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                              Prossime classi
+                                            </div>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">Nome</th>
+                                                    <th scope="col">Data inizio</th>
+                                                    <th scope="col">ROI</th>
+                                                    <th scope="col">Stato</th>
+                                                    <th scope="col">Azioni</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 75
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>15 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-success">Done</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 76
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>16 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-success">Done</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 77
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>17 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-white bg-warning">Process</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 78
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>18 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-success">Done</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 79
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>19 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-danger">Failed</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 80
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>20 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-success">Done</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 81
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>21 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-danger">Failed</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="row__title">
+                                                            <div class="code_icon rounded-circle">
+                                                                <i class="fa-solid fa-code"></i>
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                Classe 82
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <td>22 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td>
+                                                        <span class="badge text-bg-success">Done</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table__actions">
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-pencil"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fa-solid fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                              F.A.Q.
+                                            </div>
+                                            <div class="accordion">
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                      <div class="accordion__questions">
+                                                        Come aggiungere un nuovo studente?
+                                                      </div>
+                                                    </button>
+                                                  </h2>
+                                                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                                    <div class="accordion__answers accordion-body">
+                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aperiam!
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        <div class="accordion__questions">
+                                                            Come posso accedere alle informazioni del mio account?
+                                                        </div>
+                                                    </button>
+                                                  </h2>
+                                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                    <div class="accordion__answers accordion-body">
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, vitae.
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        <div class="accordion__questions">
+                                                            Posso usare questa dashboard da mobile?                                                        </div>
+                                                    </button>
+                                                  </h2>
+                                                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                    <div class="accordion__answers accordion-body">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, cupiditate.
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                              Todo
+                                            </div>
+                                            <ul class="list-group m-2">
+                                                <li class="list-group-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            <div class="form-check__text">
+                                                                Kickoff nuove classi
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            <div class="form-check__text">
+                                                                Lezione su Bootstrap 5 in classe #75
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            <div class="form-check__text">
+                                                                Controllare username github studenti
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <ul class="list-group m-2">
+                                                <li class="list-group-item">
+                                                    <img src="./img/stats.jpeg" class="card-img-top">
+                                                    <h5 class="card-title">Utenti attivi</h5>
+                                                    <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                                </li>
+                                                <li class="list-group-item">Gennaio: 1200</li>
+                                                <li class="list-group-item">Febbraio: 800</li>
+                                                <li class="list-group-item">Marzo: 1500</li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                </li>
+                                              </ul>
+                                            <div class="card-body">
+                                              
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            
                         </div>
                     </div>
                 </div>
